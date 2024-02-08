@@ -1,3 +1,5 @@
+package Feb7;
+
 public class ExampleClass {
     int intValue;
     double doubleValue;
