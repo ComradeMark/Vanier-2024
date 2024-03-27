@@ -1,2 +1,11 @@
-package Mar27;public class StackInterface {
+package Mar27;
+
+public interface StackInterface<T>{
+     void push(T element);
+     T pop();
+     T peek();
+     boolean isEmpty();
+     int size();
+     String toString();
 }
+
