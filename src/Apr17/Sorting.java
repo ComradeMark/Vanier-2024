@@ -33,6 +33,9 @@ public class Sorting {
         mergeSort(array);
         System.out.println(Arrays.toString(array));
 
+        //Heapsort
+        //Complete after BST
+
     }
 
 
