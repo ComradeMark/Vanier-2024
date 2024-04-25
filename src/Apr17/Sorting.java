@@ -54,7 +54,7 @@ public class Sorting {
         return numbers;
     }
 
-    //Selection sort is efficient abd is based on comparison operations. It adds one element in each iteration.
+    //Selection sort is efficient and is based on comparison operations. It adds one element in each iteration.
     //You need to select the smallest element in the array and move it to the beginning of the array by swapping with the front element
     public static int[] selectionsort() {
         int[] numbers = {15, 23, 199, 153, 54, 87, 98};
