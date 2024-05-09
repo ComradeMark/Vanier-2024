@@ -1,5 +1,6 @@
 package Mar28;
 import java.util.Scanner;
+/*
 public class LinkedListPropertiesDemo {
 
     public static void main(String[] args) {
@@ -227,3 +228,4 @@ public class LinkedListPropertiesDemo {
         }
 
     }
+*/
