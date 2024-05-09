@@ -4,32 +4,22 @@ package Assignment2;
 import java.util.*;
 public class Q3 {
     public static void main(String[] args) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(44);
+        queue.add(122);
+        queue.add(-4);
+        queue.add(10);
+        queue.add(0);
+        queue.add(99);
 
-
-        Queue<Integer> rand = new LinkedList<>();
-        rand.add(44);
-        rand.add(122);
-        rand.add(-4);
-        rand.add(10);
-        rand.add(0);
-        rand.add(99);
-        Queue<Integer> sortedQueue = sortQueue(rand);
-        while (!sortedQueue.isEmpty()) {
-            System.out.println(sortedQueue.poll());
-        }
+        List<Integer> tempList = new ArrayList<>();
+    while(!queue.isEmpty()){
+        tempList.add(queue.remove());
     }
-
-
-    public static Queue<Integer> sortQueue(Queue<Integer> initial) {
-        Queue<Integer> sorted = new LinkedList<>();
-        while (!initial.isEmpty()) {
-            int temp = initial.poll();
-                if (sorted.peek() > temp) {
-
-                    sorted.add(temp);
-                }
-
-        }
-        return sorted;
+    Collections.sort(tempList);
+    for(int num : tempList){
+        queue.add(num);
+    }
+        System.out.println(queue);
     }
 }

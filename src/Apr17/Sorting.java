@@ -1,6 +1,7 @@
 package Apr17;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Sorting {
 
@@ -24,8 +25,8 @@ public class Sorting {
 
 
         //Fix insertion sort code
-        System.out.println("Insertion sort: to fix ");
-       // System.out.println(Arrays.toString(insertionSort()));
+        System.out.println("Insertion sort: ");
+        insertionSort();
 
         //Merge sort
         System.out.println("Merge sort: ");
@@ -83,24 +84,31 @@ public class Sorting {
     }
 
 
-    public static int[] insertionSort() {
+    public static void insertionSort() {
         //Insertion sort places an unsorted element at its suitable place in each iteration.
         //It works similarly as we sort cards in our hand in a card game. We assume that the first element is already sorted, then we select an unsorted card
-        int[] numbers = {15, 23, 199, 153, 54, 87, 98};
-        int temp;
-        int loc;
-        for (int i = 1; i < numbers.length - 1; i++) {
-            if (numbers[i] > numbers[i + 1]) {
-                temp = numbers[i + 1];
-                loc = i + 1;
-                while (loc != 1 && numbers[loc - 1] > temp) {
-                    numbers[loc] = numbers[loc - 1];
-
-                }
-                numbers[loc] = temp;
-            }
+        Random rand = new Random();
+        int[] numbers = new int[10];
+        for(int i = 0; i<numbers.length; i++){
+            numbers[i] = rand.nextInt(100);
         }
-        return numbers;
+
+        System.out.println("Before: ");
+        System.out.println(Arrays.toString(numbers));
+
+        for(int i = 1; i<numbers.length; i++){
+            int currentValue = numbers[i];
+            int j = i-1;
+            while(j >= 0 && numbers[j] > currentValue){
+                numbers[j+1] = numbers[j];
+                j--;
+            }
+            numbers[j+1] = currentValue;
+        }
+
+
+        System.out.println("After: ");
+        System.out.println(Arrays.toString(numbers));
     }
 
 

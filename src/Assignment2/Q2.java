@@ -10,7 +10,7 @@ public class Q2 {
         schedule.put(new Bus(24, "Sherbrooke", "James"), 22);
         schedule.put(new Bus(30, "St-Denis", "Raidah"), 16);
         for(Map.Entry m:schedule.entrySet()){
-            System.out.println(m.getKey() + " " + m.getValue()); //Notice how TreeMap orders the data
+            System.out.println("Key: " +m.getKey() + " Value: " + m.getValue()); //Notice how TreeMap orders the data
         }
 
     }
